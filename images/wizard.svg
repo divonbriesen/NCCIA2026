@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 620" role="img" aria-label="Tall wizard with cloak, staff, beard, and hat">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7f1e6" />
+      <stop offset="100%" stop-color="#e6dfd2" />
+    </linearGradient>
+    <linearGradient id="cloakGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2e5f8a" />
+      <stop offset="100%" stop-color="#1f3f5f" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <rect width="420" height="620" fill="url(#bg)" />
+
+  <!-- Ground shadow -->
+  <ellipse cx="210" cy="575" rx="110" ry="22" fill="#000" opacity="0.12" />
+
+  <!-- Staff -->
+  <g filter="url(#shadow)">
+    <rect x="315" y="140" width="14" height="410" rx="7" fill="#6f4a2f" />
+    <circle cx="322" cy="122" r="24" fill="#b08d57" />
+    <circle cx="322" cy="122" r="16" fill="#d7b879" />
+    <circle cx="322" cy="122" r="9" fill="#f5dfab" />
+  </g>
+
+  <!-- Cloak -->
+  <path d="M210 220 L95 545 L325 545 Z" fill="url(#cloakGrad)" filter="url(#shadow)" />
+  <path d="M210 235 L132 545 L288 545 Z" fill="#2a5378" opacity="0.6" />
+
+  <!-- Arms -->
+  <path d="M172 300 C140 320, 130 370, 130 405" stroke="#1f3f5f" stroke-width="18" fill="none" stroke-linecap="round" />
+  <path d="M248 300 C285 325, 300 365, 308 418" stroke="#1f3f5f" stroke-width="18" fill="none" stroke-linecap="round" />
+
+  <!-- Head -->
+  <circle cx="210" cy="205" r="44" fill="#f1d5b5" filter="url(#shadow)" />
+
+  <!-- Hat brim -->
+  <ellipse cx="210" cy="168" rx="84" ry="16" fill="#233f5f" />
+
+  <!-- Hat cone -->
+  <path d="M210 58 L154 175 L266 175 Z" fill="#2e5f8a" />
+  <path d="M210 70 L170 170 L250 170 Z" fill="#3b78aa" opacity="0.55" />
+  <circle cx="206" cy="64" r="8" fill="#d7b879" />
+
+  <!-- Eyes -->
+  <circle cx="194" cy="204" r="3.2" fill="#1e1e1e" />
+  <circle cx="226" cy="204" r="3.2" fill="#1e1e1e" />
+
+  <!-- Nose -->
+  <path d="M210 209 L206 220 L214 220 Z" fill="#e7c39e" />
+
+  <!-- Mustache -->
+  <path d="M184 228 C193 222, 203 223, 210 229" stroke="#d7d7d7" stroke-width="5" fill="none" stroke-linecap="round" />
+  <path d="M236 228 C227 222, 217 223, 210 229" stroke="#d7d7d7" stroke-width="5" fill="none" stroke-linecap="round" />
+
+  <!-- Beard -->
+  <path d="M168 236 C160 290, 176 360, 210 412 C244 360, 260 290, 252 236 Z" fill="#e8e8e8" filter="url(#shadow)" />
+  <path d="M210 246 C198 300, 202 355, 210 394 C218 355, 222 300, 210 246 Z" fill="#d4d4d4" opacity="0.7" />
+
+  <!-- Cloak clasp -->
+  <circle cx="210" cy="258" r="10" fill="#d7b879" />
+  <circle cx="210" cy="258" r="5" fill="#f5dfab" />
+
+  <!-- Simple stars on cloak -->
+  <g fill="#f0dca5" opacity="0.85">
+    <path d="M175 340 l5 12 13 1 -10 8 3 12 -11 -7 -11 7 3 -12 -10 -8 13 -1z" />
+    <path d="M240 375 l4 10 11 1 -8 7 2 10 -9 -6 -9 6 2 -10 -8 -7 11 -1z" />
+    <path d="M205 455 l4 10 11 1 -8 7 2 10 -9 -6 -9 6 2 -10 -8 -7 11 -1z" />
+  </g>
+</svg>
