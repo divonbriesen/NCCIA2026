@@ -54,7 +54,6 @@ const pages = {
                 <li><a href="https://gemini.google.com/" target="_blank" rel="noreferrer">Gemini</a></li>
                 <li><a href="https://chatgpt.com/" target="_blank" rel="noreferrer">ChatGPT</a></li>
                 <li><a href="https://duck.ai/" target="_blank" rel="noreferrer">Duck.ai (no login)</a></li>
-                <li><a href="https://rawtalk.chat/" target="_blank" rel="noreferrer">rawtalk.chat (no login)</a></li>
                 <li><a href="https://www.chatgot.io/" target="_blank" rel="noreferrer">ChatGOT (no sign-up)</a></li>
               </ul>
             </li>
