@@ -153,6 +153,13 @@ const pages = {
             <li>Questions/Suggestions/Follow-Up</li>
           </ul>
         </section>
+
+        <section class="bio-block" aria-label="Featured Educator">
+          <h3>Featured: Academic Excellence in AI Education</h3>
+          <p>
+            <strong><a href="nuviadenu.html" target="_blank" rel="noreferrer" style="color: #1f4fa3; text-decoration: none; border-bottom: 2px solid #1f4fa3;">Professor Kekeli Nuviadenu</a></strong> of Bethune-Cookman University exemplifies thoughtful integration of AI tools in higher education. With two decades of academic excellence, his positive attitude and professional approach to educational innovation provide a model for AI-enhanced teaching practices.
+          </p>
+        </section>
       </section>
     `,
     },
@@ -560,6 +567,43 @@ const pages = {
             "images/codinglama_r.png",
             "images/lamacoderonmountain_a.png",
         ],
+    },
+    emojis: {
+        menu: "Emojis",
+        title: "Educational & Tech Emojis",
+        description:
+            "Collection of education and technology-related emojis for presentations, messages, and course materials.",
+        render: () => `
+      <section class="page">
+        <h2>Educational & Tech Emojis</h2>
+        <p>
+          Collection of education and technology-related emojis for presentations, messages, and course materials. Click on any emoji to copy it to your clipboard.
+        </p>
+
+        <section class="bio-block" aria-label="Emoji Collection">
+          <h3>Education & Technology Emojis</h3>
+          <div class="emoji-grid" style="font-size: 2rem; line-height: 2.5; display: grid; grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr)); gap: 0.5rem; margin: 1rem 0; cursor: pointer;">
+            📚📖📝✏️🖊️🖋️📓📔📒📕📗📘📙📄📃📋📊📈📉🗒️🗓️🏫🏛️🎒🖥️💻🖱️⌨️📐📏🔭🔬🧪🧫🧬👨‍🏫👩‍🏫👨‍🎓👩‍🎓🧑‍🎓🧑‍🏫👨‍💻👩‍💻🎓🏆🥇🎖️🏅🎗️📜🌟⭐✨🔍🔎💡📌📍🗂️🗃️📦🖼️📡🔔📢📣🧮⚗️🧲🔋⚙️🧭🌍🌎🌏🎨🎭🎵🎶🎸🎹🎺🎻💬💭🗣️🤔🧠👁️✅❓❗💯
+          </div>
+          <p style="font-size: 0.9rem; color: #666; font-style: italic;">Click any emoji above to copy it to your clipboard!</p>
+        </section>
+
+        <section class="bio-block" aria-label="Categories">
+          <h3>Categories Included</h3>
+          <ul>
+            <li><strong>Books & Reading:</strong> 📚📖📝📓📔📒📕📗📘📙📄📃</li>
+            <li><strong>Writing & Drawing:</strong> ✏️🖊️🖋️📋📊📈📉🗒️</li>
+            <li><strong>School & Learning:</strong> 🏫🏛️🎒🎓👨‍🏫👩‍🏫👨‍🎓👩‍🎓🧑‍🎓🧑‍🏫</li>
+            <li><strong>Technology:</strong> 🖥️💻🖱️⌨️👨‍💻👩‍💻📡🔔📢📣💬💭</li>
+            <li><strong>Science & Math:</strong> 📐📏🔭🔬🧪🧫🧬🧮⚗️🧲🔋⚙️🧭</li>
+            <li><strong>Achievement & Success:</strong> 🏆🥇🎖️🏅🎗️📜🌟⭐✨💯✅</li>
+            <li><strong>Organization:</strong> 🗓️🔍🔎💡📌📍🗂️🗃️📦🖼️</li>
+            <li><strong>Arts & Music:</strong> 🌍🌎🌏🎨🎭🎵🎶🎸🎹🎺🎻</li>
+            <li><strong>Thinking & Communication:</strong> 🗣️🤔🧠👁️❓❗</li>
+          </ul>
+        </section>
+      </section>
+    `,
     },
 };
 
@@ -1069,6 +1113,7 @@ function renderRoute() {
     renderMenu(route);
     app.innerHTML = route === "home" ? page.render() : renderSessionPage(page);
     initCamelidsSlideshow();
+    initEmojiCopy();
     
     // Initialize wizard slideshow when on home page
     if (route === "home") {
@@ -1099,6 +1144,39 @@ function initWizardSlideshow() {
     
     // Start the automatic slideshow with 5-second interval
     setInterval(nextSlide, 5000);
+}
+
+// Emoji copy functionality
+function initEmojiCopy() {
+    const emojiGrid = document.querySelector('.emoji-grid');
+    if (!emojiGrid) return;
+    
+    // Add click event listener to the emoji grid
+    emojiGrid.addEventListener('click', function(e) {
+        // Get the clicked character (emoji)
+        const emoji = e.target.textContent;
+        
+        if (emoji.trim()) {
+            // Copy to clipboard
+            navigator.clipboard.writeText(emoji).then(() => {
+                // Visual feedback
+                const originalContent = e.target.style.backgroundColor;
+                e.target.style.backgroundColor = '#4CAF50';
+                e.target.style.transform = 'scale(1.1)';
+                e.target.style.transition = 'all 0.2s ease';
+                
+                setTimeout(() => {
+                    e.target.style.backgroundColor = originalContent;
+                    e.target.style.transform = 'scale(1)';
+                }, 300);
+                
+                // Optional: Show a brief message
+                console.log(`Copied: ${emoji}`);
+            }).catch((err) => {
+                console.error('Failed to copy emoji: ', err);
+            });
+        }
+    });
 }
 
 window.addEventListener("hashchange", renderRoute);

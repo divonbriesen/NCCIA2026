@@ -1,0 +1,562 @@
+/* Professor Kekeli Nuviadenu Academic Website Styles */
+
+/* Color Variables */
+:root {
+  --primary-blue: #1e3a8a;        /* Deep blue */
+  --accent-blue: #3b82f6;         /* Bright blue */
+  --light-blue: #dbeafe;          /* Light blue */
+  --black: #1f2937;               /* Rich black */
+  --burgundy: #7c2d12;            /* Deep burgundy */
+  --light-burgundy: #fecaca;      /* Light burgundy */
+  --ivory: #fffbeb;               /* Ivory/cream */
+  --white: #ffffff;
+  --gray-light: #f9fafb;
+  --gray-medium: #6b7280;
+  --gray-dark: #374151;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.6;
+  color: var(--black);
+  background-color: var(--ivory);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--burgundy);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+}
+
+h4 {
+  font-size: 1.25rem;
+  color: var(--black);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--gray-dark);
+}
+
+/* Header Styles */
+.site-header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--burgundy) 100%);
+  color: var(--ivory);
+  padding: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.professor-name {
+  color: var(--ivory);
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.university-affiliation {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  opacity: 0.9;
+}
+
+.service-years {
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Navigation */
+.main-navigation {
+  margin-top: 1rem;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: var(--ivory);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active-nav {
+  background-color: rgba(255, 251, 235, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--white);
+  margin: 3rem 0;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid var(--burgundy);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-title {
+  color: var(--primary-blue);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--gray-dark);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--light-blue);
+  border-radius: 8px;
+  min-width: 120px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-family: 'Crimson Text', serif;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gray-medium);
+  margin-top: 0.25rem;
+}
+
+/* Professor Portrait */
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.professor-portrait {
+  position: relative;
+}
+
+.portrait-placeholder {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, var(--burgundy), var(--primary-blue));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: 4px solid var(--ivory);
+}
+
+.initials {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--ivory);
+  font-family: 'Crimson Text', serif;
+}
+
+/* Content Sections */
+.content-section {
+  margin: 4rem 0;
+  padding: 3rem 2rem;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.content-section:nth-child(even) {
+  background-color: var(--gray-light);
+}
+
+.section-container {
+  max-width: 100%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.2rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--burgundy), var(--primary-blue));
+  border-radius: 2px;
+}
+
+.subsection-title {
+  margin-bottom: 1rem;
+  color: var(--burgundy);
+  font-size: 1.4rem;
+}
+
+/* About Section */
+.about-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-text h3 {
+  margin-top: 2rem;
+}
+
+.about-text h3:first-child {
+  margin-top: 0;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  padding: 1.5rem;
+  background-color: var(--light-blue);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.highlight-card h4 {
+  color: var(--primary-blue);
+  margin-bottom: 0.75rem;
+}
+
+.highlight-card p {
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.highlight-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlight-card li {
+  padding: 0.25rem 0;
+  color: var(--gray-dark);
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.highlight-card li::before {
+  content: '▲';
+  position: absolute;
+  left: 0;
+  color: var(--burgundy);
+  font-size: 0.8rem;
+}
+
+/* Teaching Section */
+.teaching-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.course-card {
+  padding: 1.5rem;
+  background-color: var(--ivory);
+  border: 2px solid var(--light-burgundy);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.course-card:hover {
+  border-color: var(--burgundy);
+  box-shadow: 0 4px 12px rgba(124, 45, 18, 0.15);
+  transform: translateY(-2px);
+}
+
+.course-card h4 {
+  color: var(--burgundy);
+  margin-bottom: 0.75rem;
+}
+
+/* Research Section */
+.research-section {
+  background-color: var(--light-blue);
+}
+
+.research-content {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Service Section */
+.service-content {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Contact Section */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.contact-info strong {
+  color: var(--primary-blue);
+}
+
+/* Footer */
+.site-footer {
+  background: linear-gradient(135deg, var(--black) 0%, var(--gray-dark) 100%);
+  color: var(--ivory);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-info p {
+  margin-bottom: 0.25rem;
+  color: var(--ivory);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--ivory);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--light-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .about-content,
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+  }
+  
+  .content-section {
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .hero-stats {
+    justify-content: center;
+  }
+  
+  .stat-item {
+    min-width: 100px;
+  }
+  
+  .professor-name {
+    font-size: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0 1rem;
+  }
+  
+  .portrait-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .initials {
+    font-size: 2.5rem;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation Classes - Only apply when JS is available */
+.js-enabled .content-section,
+.js-enabled .hero-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.js-enabled .content-section.animate-in,
+.js-enabled .hero-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact Links */
+.contact-link {
+  color: var(--primary-blue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  border-bottom-color: var(--primary-blue);
+}
+
+/* Focus States for Accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .main-navigation,
+  .footer-links {
+    display: none;
+  }
+  
+  .content-section {
+    box-shadow: none;
+    border: 1px solid var(--gray-medium);
+  }
+  
+  body {
+    background-color: white;
+  }
+}
