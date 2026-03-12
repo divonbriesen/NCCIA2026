@@ -97,6 +97,12 @@ Teaching requires a lot of different things- from proofreading instructions, to 
 - Discuss updating modules in Canvas with AI assistance using API
 - Review syllabus tweaking using AI tools
 - Explore student list management and organization
+- Participant Examples
+  - dull stuff!!
+    - checking writing
+    - cartoons
+  - Created a lesson and took objectives to create a 50-minute lesson, and used to assist building a course from scratch
+  - Creating lessons lists, and encouraging students to use for code troubleshooting and tutoring.
 - Examine AI's game-changing potential in education
 - Wrap-up
 - Questions/Suggestions/Follow-Up
@@ -118,7 +124,8 @@ Let's explore some crazy examples of the kind of development we can do without h
 - Read the Room & Ducks
 - Critical information app
 - Some random recent work:
-  - and app that processes an introduction form (see tomorrow's session) and converts the results to json, html, and a webpage
+  - and app that processes an introduction form (see tomorrow's session) and converts the results to json, html, and a webpage: https://divonbriesen.github.io/introductions/
+  - a random lama site, updated to be a faculty site... messy: https://divonbriesen.github.io/wesome/
   - an app to scan thru hundreds of canvas posts, count them and give feedback and a score
   - code to review a google document and provide lists of things students are missing
   - Palo Alto guy is vibecoding a training interface
@@ -131,7 +138,8 @@ Let's explore some crazy examples of the kind of development we can do without h
     - lots of ai tweaks
     - populate from a text file (i use markdown atm)
   - Generate thousands of organized study points (HCI, Web, etc...)
-  - generate faculty webpages (i.e. http:divonbriesen.github.io/JoelMoore/)
+  - generate faculty webpages http://divonbriesen.github.io/JoelMoore/
+  - generate student intros:
 - Clean up rosters with AI assistance (maybe for list of websites, or switching first/last, or removing whatever)
 - Update formats automatically
 - Write applications using AI tools

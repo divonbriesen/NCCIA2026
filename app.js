@@ -81,6 +81,80 @@ const pages = {
         },
         description:
             "Teaching requires a lot of different things- from proofreading instructions, to tedious attendance, to setting up courses. Let's explore how AI can (or perhaps cannot) begin to shift us away from some of the menial tasks, and towards new possibilities. Need to update modules in Canvas? Need to tweak your syllabus? Need to get a good list of all students... AI has the potential to be game-changing in many ways.",
+        render: () => `
+      <section class="page">
+        <h2>Can AI Help us as Teachers? Let's Talk about How.</h2>
+        <p>
+          Teaching requires a lot of different things- from proofreading instructions, to tedious attendance, to setting up courses. Let's explore how AI can (or perhaps cannot) begin to shift us away from some of the menial tasks, and towards new possibilities. Need to update modules in Canvas? Need to tweak your syllabus? Need to get a good list of all students... AI has the potential to be game-changing in many ways.
+        </p>
+        <div class="session-meta">
+          <div class="meta-item">
+            <span class="meta-label">Day</span>
+            Thursday, March 12, 2026
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Time</span>
+            1:45 p.m. - 3:00 p.m.
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Room</span>
+            Room 111
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Session Block</span>
+            Session 7
+          </div>
+        </div>
+
+        <section class="bio-block" aria-label="Session Agenda">
+          <h3>Session Agenda</h3>
+          <ul>
+            <li>Introductions</li>
+            <li>Background/Summary
+              <ul>
+                <li>Ducks.</li>
+                <li>Many years, much playing around, whether find and replace in Word, to calendar setup in google docs, to trying to create macros in LMS's...</li>
+              </ul>
+            </li>
+            <li>"There's gotta be a better way..."</li>
+            <li>"Anything that a computer/robot CAN do, it should."</li>
+            <li>Read the Room</li>
+            <li>Short session context:
+              <ul>
+                <li>WEB215 Advanced Markup & Scripting coming up</li>
+                <li>Summer session of ITIS3135 Front End Web Development coming up</li>
+                <li>Tasks include:
+                  <ul>
+                    <li>Set up headings for each module in format: Week Start Date (# Mon) - Week End Date: Week/Module Number - Short Subject (i.e. 9 Mar - 15 Mar : Week 8 >> NCCIA Conference) - Tons of variations of this</li>
+                    <li>Create syllabus and/or edit syllabus (CPCC uses tool, Charlotte leaves it to you)</li>
+                    <li>emojis? Formatting? Spelling?</li>
+                    <li>ADHD...</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Discuss updating modules in Canvas with AI assistance using API</li>
+            <li>Review syllabus tweaking using AI tools</li>
+            <li>Explore student list management and organization</li>
+            <li>Participant Examples
+              <ul>
+                <li>dull stuff!!
+                  <ul>
+                    <li>checking writing</li>
+                    <li>cartoons</li>
+                  </ul>
+                </li>
+                <li>created a lesson and took objectives to create a 50-minute lesson, and used to assist building a course from scratch</li>
+                <li>Creating lessons lists, and encouraging students to use for code troubleshooting and tutoring.</li>
+              </ul>
+            </li>
+            <li>Examine AI's game-changing potential in education</li>
+            <li>Wrap-up</li>
+            <li>Questions/Suggestions/Follow-Up</li>
+          </ul>
+        </section>
+      </section>
+    `,
     },
     "vibe-coding": {
         menu: "Vibe Coding",
@@ -93,6 +167,71 @@ const pages = {
         },
         description:
             "Let's explore some crazy examples of the kind of development we can do without having to really code. From generating thousands of organized study points, to cleaning up a roster, to updating formats, to writing applications... our world of software is changing quickly. It's scary, and can seem overwhelming - but it may also be the biggest technology shift in our lifetimes - let's dive in!",
+        render: () => `
+      <section class="page">
+        <h2>Vibe Coding - It's ALL Changing...</h2>
+        <p>
+          Let's explore some crazy examples of the kind of development we can do without having to really code. From generating thousands of organized study points, to cleaning up a roster, to updating formats, to writing applications... our world of software is changing quickly. It's scary, and can seem overwhelming - but it may also be the biggest technology shift in our lifetimes - let's dive in!
+        </p>
+        <div class="session-meta">
+          <div class="meta-item">
+            <span class="meta-label">Day</span>
+            Thursday, March 12, 2026
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Time</span>
+            3:15 p.m. - 4:30 p.m.
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Room</span>
+            Room 111
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Session Block</span>
+            Session 8
+          </div>
+        </div>
+
+        <section class="bio-block" aria-label="Session Agenda">
+          <h3>Session Agenda</h3>
+          <ul>
+            <li>Introductions</li>
+            <li>Background/Summary</li>
+            <li>Read the Room & Ducks</li>
+            <li>Critical information app</li>
+            <li>Some random recent work:
+              <ul>
+                <li>An app that processes an introduction form (see tomorrow's session) and converts the results to json, html, and a webpage: <a href="https://divonbriesen.github.io/introductions/" target="_blank" rel="noreferrer">https://divonbriesen.github.io/introductions/</a></li>
+                <li>A random llama site, updated to be a faculty site... messy: <a href="https://divonbriesen.github.io/wesome/" target="_blank" rel="noreferrer">https://divonbriesen.github.io/wesome/</a></li>
+                <li>An app to scan thru hundreds of canvas posts, count them and give feedback and a score</li>
+                <li>Code to review a google document and provide lists of things students are missing</li>
+                <li>Palo Alto guy is vibecoding a training interface</li>
+                <li>This website (see my other session)
+                  <ul>
+                    <li>Code to build this website</li>
+                    <li>Code to generate an svg wizard</li>
+                    <li>Make llamas (see slideshow)</li>
+                    <li>Make wizard</li>
+                    <li>Two slideshows</li>
+                    <li>Lots of AI tweaks</li>
+                    <li>Populate from a text file (I use markdown atm)</li>
+                  </ul>
+                </li>
+                <li>Generate thousands of organized study points (HCI, Web, etc...)</li>
+                <li>Generate faculty webpages: <a href="http://divonbriesen.github.io/JoelMoore/" target="_blank" rel="noreferrer">http://divonbriesen.github.io/JoelMoore/</a></li>
+                <li>Generate student intros</li>
+              </ul>
+            </li>
+            <li>Clean up rosters with AI assistance (maybe for list of websites, or switching first/last, or removing whatever)</li>
+            <li>Update formats automatically</li>
+            <li>Write applications using AI tools</li>
+            <li>Discuss the overwhelming but transformative nature of current tech shifts</li>
+            <li>Wrap-up</li>
+            <li>Questions/Suggestions/Follow-Up</li>
+          </ul>
+        </section>
+      </section>
+    `,
     },
     "producing-website": {
         menu: "AI Web",
@@ -105,6 +244,57 @@ const pages = {
         },
         description:
             "Using AI tools and basic web knowledge, let's explore how to build a site from nothing using VSCode, previewing it as we go, and publishing it to GitHub pages - perhaps even with our own domain. Join us in this hands-on activity. If possible, have VSCode and GitHub Desktop pre-installed, and create a GitHub account if you don't already have one. While basic web knowledge is helpful, we'll help you along if you don't have a clue.",
+        render: () => `
+      <section class="page">
+        <h2>Producing a website from Scratch with AI</h2>
+        <p>
+          Using AI tools and basic web knowledge, let's explore how to build a site from nothing using VSCode, previewing it as we go, and publishing it to GitHub pages - perhaps even with our own domain. Join us in this hands-on activity. If possible, have VSCode and GitHub Desktop pre-installed, and create a GitHub account if you don't already have one. While basic web knowledge is helpful, we'll help you along if you don't have a clue.
+        </p>
+        <div class="session-meta">
+          <div class="meta-item">
+            <span class="meta-label">Day</span>
+            Friday, March 13, 2026
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Time</span>
+            9:00 a.m. - 10:15 a.m.
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Room</span>
+            Room 113
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Session Block</span>
+            Session 9
+          </div>
+        </div>
+
+        <section class="bio-block" aria-label="Session Agenda">
+          <h3>Session Agenda</h3>
+          <ul>
+            <li>Introductions</li>
+            <li>Background/Summary</li>
+            <li>Read the Room</li>
+            <li>Use AI tools and basic web knowledge to build a site from nothing</li>
+            <li>Demonstrate using VSCode for development</li>
+            <li>Preview sites as we develop</li>
+            <li>Publish to GitHub pages</li>
+            <li>Explore custom domain setup</li>
+            <li>Hands-on activity participation</li>
+            <li>Wrap-up</li>
+            <li>Questions/Suggestions/Follow-Up</li>
+          </ul>
+
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>VSCode (pre-installed if possible)</li>
+            <li>GitHub Desktop (pre-installed if possible)</li>
+            <li>GitHub account (create if needed)</li>
+            <li>Basic web knowledge helpful but not required</li>
+          </ul>
+        </section>
+      </section>
+    `,
     },
     "everything-introductions": {
         menu: "All Intros",
@@ -134,6 +324,87 @@ const pages = {
         introInstructions: {
             source: "https://docs.google.com/document/d/16gWOKFFqFE2QyFEXwCDIWb6u3eLwPyS6_OGdggxAdlI/edit?tab=t.0",
         },
+        render: () => `
+      <section class="page">
+        <h2>Everything Introductions - Using Intros for Three-Tier App Dev</h2>
+        <p>
+          Using an introduction format developed over many years, we'll explore first how to create a shared introduction for students, and then dive into how to use that same introduction to discussion UI, data modeling, 3-tier applications, data storage and retrieval, and all the formats in between. Depending on time, we may be able to vibe code additional tools to demonstrate how we can create and retrieve introduction data, put that data into different formats (xml, json, html) and display it back in various forms (one at a time, sorted, selected fields, etc...).
+        </p>
+        <div class="session-meta">
+          <div class="meta-item">
+            <span class="meta-label">Day</span>
+            Friday, March 13, 2026
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Time</span>
+            10:30 a.m. - 11:45 a.m.
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Room</span>
+            Room 113
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Session Block</span>
+            Session 10
+          </div>
+        </div>
+
+        <section class="bio-block" aria-label="Session Agenda">
+          <h3>Session Agenda</h3>
+          <ul>
+            <li>Introductions</li>
+            <li>Background/Summary</li>
+            <li>Read the Room</li>
+            <li>Demonstrate shared intros</li>
+            <li>Create our intros and/or generate AI samples</li>
+            <li>Count items and detail formatting
+              <ul>
+                <li>Talk about instructions</li>
+                <li>Talk about data model</li>
+                <li>Talk about round trip</li>
+              </ul>
+            </li>
+            <li>If there's time:
+              <ul>
+                <li>Make a form</li>
+                <li>Output in formats like JSON/XML/HTML</li>
+                <li>Talk about data retrieval</li>
+                <li>Generate tables? SQL? JSON</li>
+              </ul>
+            </li>
+            <li>Wrap-up</li>
+            <li>Questions/Suggestions/Follow-Up</li>
+          </ul>
+        </section>
+
+        <section class="bio-block" aria-label="Introduction Instructions">
+          <h3>Introduction Instructions (Quick + Clean)</h3>
+          <p>
+            Source:
+            <a href="https://docs.google.com/document/d/16gWOKFFqFE2QyFEXwCDIWb6u3eLwPyS6_OGdggxAdlI/edit?tab=t.0" target="_blank" rel="noreferrer">Google Doc Instructions</a>
+          </p>
+          <p><strong>Goal:</strong> Create your intro in the shared Google Doc, format it correctly, then submit your <code>Heading 2</code> link in the LMS.</p>
+
+          <h4>Part 1: Create and Link Your Entry</h4>
+          <ol>
+            <li>Open the shared Introductions doc from the link in your course.</li>
+            <li>Go DOWN IN THE DOCUMENT BELOW the table of contents to where your last name belongs.</li>
+            <li>Add several blank lines there.</li>
+            <li>Add a horizontal rule (line) above those blank lines and another horizontal rule below them.</li>
+            <li>Type your name as <code>Last, First M.</code> and set it to <code>Heading 2</code>. Do not change other formatting.</li>
+            <li>Go up to the table of contents, right-click it, and choose <code>Update</code>. Your name should appear on it.</li>
+            <li>Click your name in the TOC to make sure it jumps to your entry.</li>
+          </ol>
+
+          <p><strong>Resources:</strong></p>
+          <ul class="sources-list">
+            <li><a href="https://docs.google.com/document/d/17UVznWXmW1-6ZE_W7e8eRckUlN29qGGvEPoJlaXkd8o/edit?tab=t.0" target="_blank" rel="noreferrer">Sample Introductions (editable google doc)</a></li>
+            <li><a href="https://docs.google.com/document/d/e/2PACX-1vQkxeTH8MWpNnwYj7IiIXrs4iVywZsw6IJTomGtGQ_tL2Lo02-nWAS6hLFz3kSFZciojLNrg-TzKj2L/pub" target="_blank" rel="noreferrer">Sample introductions (published google doc)</a></li>
+            <li><a href="https://docs.google.com/document/d/1NEiLa_vDuVtXdSGtzEL1nXHSuqtd6dONIX_3ePQpNQM/edit?usp=sharing" target="_blank" rel="noreferrer">Participant Intros (Google Doc)</a></li>
+          </ul>
+        </section>
+      </section>
+    `,
     },
     "sw-roundtable": {
         menu: "WPD Roundtable",
