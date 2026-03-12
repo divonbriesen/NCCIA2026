@@ -23,8 +23,12 @@ const pages = {
 
         <section class="bio-block" aria-label="Speaker bio">
           <h3>Speaker Bio</h3>
-          <figure class="home-wizard home-wizard-inline">
-            <img src="images/wizard.svg" alt="Illustration of a tall wizard with cloak, staff, beard, and hat" />
+          <figure class="home-wizard home-wizard-inline slideshow-container">
+            <div class="slideshow-wrapper">
+              <img src="images/wizard.svg" alt="Illustration of a tall wizard with cloak, staff, beard, and hat" class="slide active" />
+              <img src="images/di_wizard.png" alt="D.I. wizard illustration" class="slide" />
+              <img src="images/di_wizard2.png" alt="D.I. wizard illustration variant" class="slide" />
+            </div>
           </figure>
           <p>
             According to the NCCIA 2026 published agenda, D.I. von Briesen is
@@ -142,6 +146,122 @@ const pages = {
         },
         description:
             "Web, Programming and Databases roundtable from Session 4 (Roundtables) in the NCCIA 2026 agenda.",
+        render: () => `
+      <section class="page">
+        <h2>Web, Programming & Databases Roundtable</h2>
+        <p>
+          Web, Programming and Databases roundtable from Session 4 (Roundtables) in the NCCIA 2026 agenda.
+        </p>
+        <div class="session-meta">
+          <div class="meta-item">
+            <span class="meta-label">Day</span>
+            Wednesday, March 11, 2026
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Time</span>
+            3:15 p.m. - 4:30 p.m.
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Room</span>
+            Room 111
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Session Block</span>
+            Session 4 (Roundtables)
+          </div>
+        </div>
+
+        <section class="bio-block" aria-label="Roundtable Attendees">
+          <h3>Attendees</h3>
+          <ul class="attendee-list">
+            <li><strong>Mary Anne Barckhoff</strong> - Wake Tech
+              <ul>
+                <li>Can only use Copilot</li>
+              </ul>
+            </li>
+            <li><strong>Alison Consol</strong> - Wake Tech
+              <ul>
+                <li>Web Dev Gone, as is CP (Computer Programming)</li>
+                <li>Now 3 tracks under SW (Software)</li>
+                <li>Web and UX hanging by a thread</li>
+                <li>UX/UI people have trouble finding work</li>
+                <li>Marketing classes as part of the program</li>
+                <li>4 DME (Digital Media) courses within program</li>
+              </ul>
+            </li>
+            <li><strong>Katlyn Mitchell</strong> - Isothermal
+              <ul>
+                <li>Merged programming and web</li>
+                <li>Just have two tracks</li>
+                <li>Web numbers are low</li>
+                <li>Business Support is helpdesk - beefed it up</li>
+                <li>Cyber is growing</li>
+                <li>AI is brand new - recently hired AI instructor with industry background</li>
+                <li>Got rid of SGD (Simulation & Game Development)</li>
+              </ul>
+            </li>
+            <li><strong>Stephanie Eggers</strong> - Western Piedmont CC
+              <ul>
+                <li>With IT, networking certs, IT support certs</li>
+                <li>AS in IT</li>
+                <li>Different department for SGD, with some Web</li>
+                <li>Full time at NCSSM (North Carolina School of Science and Mathematics)</li>
+              </ul>
+            </li>
+            <li><strong>Richard Tillies</strong> - Wake Tech
+              <ul>
+                <li>Computer programming is turning into SD (Software Development)</li>
+                <li>Full stack, Java, C++</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section class="bio-block" aria-label="Key Discussion Points">
+          <h3>Key Discussion Points</h3>
+          
+          <h4>Course Structure & Content</h4>
+          <ul>
+            <li><strong>CTI110 and 120 Discussion:</strong> Opinion that these survey courses should be eliminated - they're too vague in what they cover</li>
+            <li><strong>Security Focus:</strong> Suggestion to add SEC110 (Security fundamentals)</li>
+            <li><strong>AI Integration:</strong>
+              <ul>
+                <li>CSC113 - AI Fundamentals</li>
+                <li>CSC114 - AI 1</li>
+                <li>No AI degree at the moment</li>
+                <li>Python is a prerequisite for CSC114</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h4>Teaching Philosophy & Approach</h4>
+          <ul>
+            <li><strong>Foundation First:</strong> Get the basics then add AI to the foundations</li>
+            <li><strong>Amplified Learning:</strong> Use AI to enhance and amplify learning processes</li>
+            <li><strong>Problem-Solving Focus:</strong> Understand problems to get solutions working - language may be behind the scenes</li>
+            <li><strong>Scenario-Based Learning:</strong> Present students with scenarios and help them develop solutions</li>
+          </ul>
+
+          <h4>Skills & Competencies</h4>
+          <ul>
+            <li><strong>"Durable Skills"</strong> (from conference):
+              <ul>
+                <li>Communication</li>
+                <li>Collaboration</li>
+                <li>Planning ability</li>
+                <li>Design skills</li>
+                <li>Architecture creation</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h4>Open Questions</h4>
+          <ul>
+            <li><strong>New Professional Identity:</strong> "What do we call this new kind of person?" - discussing how the role of programmers/developers is evolving with AI integration</li>
+          </ul>
+        </section>
+      </section>
+    `,
     },
     camelids: {
         menu: "Camelids",
@@ -526,6 +646,10 @@ function synthesizeAgendaItems(description) {
 }
 
 function renderSessionPage(page) {
+    if (page.render) {
+        return page.render();
+    }
+    
     if (page.slideshowImages) {
         return renderCamelidsPage(page);
     }
@@ -674,7 +798,36 @@ function renderRoute() {
     renderMenu(route);
     app.innerHTML = route === "home" ? page.render() : renderSessionPage(page);
     initCamelidsSlideshow();
+    
+    // Initialize wizard slideshow when on home page
+    if (route === "home") {
+        initWizardSlideshow();
+    }
+    
     document.title = `NCCIA 2026 | D.I. von Briesen's ${page.title}`;
+}
+
+// Wizard slideshow functionality
+function initWizardSlideshow() {
+    const slides = document.querySelectorAll('.slideshow-container .slide');
+    
+    if (slides.length <= 1) return; // Don't start slideshow if only one image
+    
+    let currentSlide = 0;
+    
+    function nextSlide() {
+        // Remove active class from current slide
+        slides[currentSlide].classList.remove('active');
+        
+        // Move to next slide
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        // Add active class to new slide
+        slides[currentSlide].classList.add('active');
+    }
+    
+    // Start the automatic slideshow with 5-second interval
+    setInterval(nextSlide, 5000);
 }
 
 window.addEventListener("hashchange", renderRoute);
